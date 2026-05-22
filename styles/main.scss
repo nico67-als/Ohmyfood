@@ -1,3 +1,5 @@
+@use 'variables' ;
+@use 'header' ;
 /* Général */
 * {
   font-family: "Roboto", sans-serif;
@@ -8,3 +10,10 @@ h1 {
   font-weight: 400;
   font-style: normal;
 }
+
+body {
+  margin: 0;
+  width: 375px;
+}
+
+

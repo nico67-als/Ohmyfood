@@ -1,0 +1,37 @@
+@use 'variables' as * ;
+
+.header {  
+  display: flex;  
+  height: 113px;   
+    &_a { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: 63px;               
+        &_title {
+            font-size: 30px;
+            margin: 0;
+        }
+    }
+    &_b {       
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;    
+        margin: 0;
+        height: 50px;
+        background-color: $couleur-header-background;
+        &_icon {
+            font-size: 16px;
+            color: $couleur-gris-subtitle;
+       }
+        &_text {
+            color: $couleur-gris-subtitle ;
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+}
+
