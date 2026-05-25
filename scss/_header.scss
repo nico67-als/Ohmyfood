@@ -1,4 +1,4 @@
-@use 'variables' as * ;
+@use 'partials/variables' as * ;
 
 .header {  
   display: flex;  
@@ -10,11 +10,10 @@
         margin: 0;
         height: 63px;
         position: relative;
-        z-index: 1;  
+        z-index: 2;  
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);                   
-        &_title {
-            font-size: 30px;
-            margin: 0;
+        &--logo {
+            height: 36px;
         }
     }
     &_b {       
@@ -25,13 +24,15 @@
         gap: 17px;    
         margin: 0;
         height: 50px;
+        position: relative;
+        z-index: 1;
         background-color: $couleur-header-background;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        &_icon {
+        &--icon {
             font-size: 16px;
             color: $couleur-gris-subtitle;
        }
-        &_text {
+        &--text {
             color: $couleur-gris-subtitle ;
             font-size: 16px;
             margin: 0;

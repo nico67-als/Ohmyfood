@@ -1,0 +1,131 @@
+@use 'partials/variables' as *;
+@use 'header' ;
+@use 'mixin/mixin' as *;
+
+/* Général */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 375px;
+}
+
+// Section A - Réservez le menu qui vous convient
+.hero {
+  display: flex;
+  flex-direction: column;  
+  text-align: center;  
+  margin: 0;      
+  background-color: $couleur-background; 
+
+  &_content {    
+    display: flex;
+    flex-direction: column ;   
+    padding: 39px 0 0 0;
+    margin-bottom: 57px; 
+    
+    &--title {
+      @include title;
+      margin: 0;
+    }
+
+    &--subtitle{
+      @include subtitle;           
+    }
+  
+    &--btn {
+      width: 218px;
+      align-self: center;  
+      height: 50px;
+      padding: 13px 16px;
+      border-radius: 30px;
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: 500;
+      background: linear-gradient(to top, $primary-color, $secondary-color); 
+      
+    }
+  }
+}
+
+// Section Fonctionnement
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  margin-bottom: 68px;  
+  
+  &_title {
+    @include title;
+    margin-bottom: 26px;
+  }
+}
+
+.card_section {  
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+  gap: 25px;
+
+  &--card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 322.49px;
+    height: 72.38px;
+    background-color: #f6f6f6;
+    border-radius: 20px;  
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);    
+
+    &--number {
+      display: inline-flex;
+      justify-content: center;      
+      align-items: center;
+      position: relative;
+      left: -12px;
+      color: white;
+      background-color: $primary-color;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;   
+      margin-right: 10px;   
+    }
+
+    &--icon {
+      margin-right: 27px;   
+      margin-left: 0; 
+    }
+
+    &--text {
+      font-size: 16px;
+      font-weight: 500;      
+    }
+  }
+}
+
+// Section Restaurants
+
+.restaurants {
+  display: flex;
+  padding: 54px 20px;
+  background-color: $couleur-background;
+
+  &_title {
+    @include title;
+    margin: 0;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+
+  &_card {
+    
+  }
+  }
