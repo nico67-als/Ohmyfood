@@ -137,6 +137,7 @@ body {
 
 .restaurants {
   display: flex;
+  flex-direction: column;
   padding: 54px 20px;
   background-color: #f3f3f3;
 }
@@ -149,4 +150,18 @@ body {
 .cards {
   display: flex;
   flex-direction: column;
+}
+.cards_card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+}
+.cards_card--img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

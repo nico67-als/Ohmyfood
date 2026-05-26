@@ -112,6 +112,7 @@ body {
 
 .restaurants {
   display: flex;
+  flex-direction: column;
   padding: 54px 20px;
   background-color: $couleur-background;
 
@@ -123,9 +124,24 @@ body {
 
 .cards {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
 
   &_card {
-    
+    display: flex ;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;   
+    border-radius: 15px; 
+
+    &--img {
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      width: 100%;
+    }
+
+    &--content {
+      
+    }
   }
   }
