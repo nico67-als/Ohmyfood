@@ -140,6 +140,7 @@ body {
   flex-direction: column;
   padding: 54px 20px;
   background-color: #f3f3f3;
+  gap: 26px;
 }
 .restaurants_title {
   font-size: 24px;
@@ -149,6 +150,7 @@ body {
 .restaurants__card-section {
   display: flex;
   flex-direction: column;
+  gap: 18px;
 }
 
 .restaurants-card {
@@ -182,6 +184,7 @@ body {
   font-weight: 500;
   padding: 6px 9px;
   border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .restaurants-card__content {
   display: flex;
@@ -218,4 +221,42 @@ body {
 .restaurants-card__like.is-liked .restaurants-card__like-icon path {
   fill: url(#likeGradient);
   stroke: url(#likeGradient);
+}
+
+footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 0 5px 25px;
+}
+footer .logo {
+  color: white;
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 18px;
+}
+footer nav {
+  gap: 7px;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer i {
+  font-size: 13px;
+  color: white;
+}
+footer .icon-txt {
+  color: white;
+  margin-left: 11px;
+  font-size: 16px;
+  font-weight: 500;
+}
+footer a {
+  text-decoration: none;
+}
+footer .footer_li-txt {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */

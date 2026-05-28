@@ -1,5 +1,5 @@
 @use 'partials/variables' as *;
-@use 'header' ;
+@use 'header';
 @use 'mixin/mixin' as *;
 
 /* Général */
@@ -15,29 +15,29 @@ body {
 // Section A - Réservez le menu qui vous convient
 .hero {
   display: flex;
-  flex-direction: column;  
-  text-align: center;  
-  margin: 0;      
-  background-color: $couleur-background; 
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  background-color: $couleur-background;
 
-  &_content {    
+  &_content {
     display: flex;
-    flex-direction: column ;   
+    flex-direction: column;
     padding: 39px 0 0 0;
-    margin-bottom: 57px; 
-    
+    margin-bottom: 57px;
+
     &--title {
       @include title;
       margin: 0;
     }
 
-    &--subtitle{
-      @include subtitle;           
+    &--subtitle {
+      @include subtitle;
     }
-  
+
     &--btn {
       width: 218px;
-      align-self: center;  
+      align-self: center;
       height: 50px;
       padding: 13px 16px;
       border-radius: 30px;
@@ -45,8 +45,8 @@ body {
       border: none;
       font-size: 16px;
       font-weight: 500;
-      background: linear-gradient(to top, $primary-color, $secondary-color); 
-      
+      background: linear-gradient(to top, $primary-color, $secondary-color);
+
     }
   }
 }
@@ -57,15 +57,15 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0px 20px;
-  margin-bottom: 68px;  
-  
+  margin-bottom: 68px;
+
   &_title {
     @include title;
     margin-bottom: 26px;
   }
 }
 
-.card_section {  
+.card_section {
   display: flex;
   flex-direction: column;
   padding-left: 12px;
@@ -79,12 +79,12 @@ body {
     width: 322.49px;
     height: 72.38px;
     background-color: #f6f6f6;
-    border-radius: 20px;  
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);    
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 
     &--number {
       display: inline-flex;
-      justify-content: center;      
+      justify-content: center;
       align-items: center;
       position: relative;
       left: -12px;
@@ -92,18 +92,18 @@ body {
       background-color: $primary-color;
       border-radius: 50%;
       width: 24px;
-      height: 24px;   
-      margin-right: 10px;   
+      height: 24px;
+      margin-right: 10px;
     }
 
     &--icon {
-      margin-right: 27px;   
-      margin-left: 0; 
+      margin-right: 27px;
+      margin-left: 0;
     }
 
     &--text {
       font-size: 16px;
-      font-weight: 500;      
+      font-weight: 500;
     }
   }
 }
@@ -115,6 +115,7 @@ body {
   flex-direction: column;
   padding: 54px 20px;
   background-color: $couleur-background;
+  gap: 26px;
 
   &_title {
     @include title;
@@ -124,87 +125,132 @@ body {
   &__card-section {
     display: flex;
     flex-direction: column;
+    gap: 18px;
   }
 
 }
 
 .restaurants-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+  height: 251px;
+
+  &__image {
+    position: relative;
+
+    img {
+      display: block;
+      object-fit: cover;
+      object-position: bottom;
+      width: 100%;
+      height: 175px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+  }
+
+  &__badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #99e2d0;
+    color: #008766;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 9px;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 25px 12px 13px;
+  }
+
+  &__txt {
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
-    background-color: white;
-    height: 251px;
+    gap: 5px;
+  }
 
-    &__image {
-      position: relative;      
+  &__title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+  }
 
-      img {
-        display: block;
-        object-fit: cover; 
-        object-position: bottom;       
-        width: 100%;  
-        height: 175px;   
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;          
-      }
+  &__place {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 300;
+  }
 
+  &__like {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &-icon {
+      width: 22px;
+      height: 21px;
     }
 
-    &__badge {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background: #99e2d0;
-      color: #008766;
-      font-size: 14px;
-      font-weight: 500;
-      padding: 6px 9px;
-      border-radius: 2px;      
-    }
-
-    &__content {
-      display: flex;
-      flex-direction: row;    
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 25px 12px 13px;      
-    }
-
-    &__txt {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;        
-      }
-    
-    &__title {
-      margin: 0;
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    &__place {
-      margin: 0;
-      font-size: 17px;
-      font-weight: 300;
-    }
-
-    &__like {      
-      background: none;
-      border: none; 
-      padding: 0;
-      cursor: pointer;
-      
-      &-icon {
-        width: 22px;
-        height: 21px;
-      }
-
-       &.is-liked &-icon path {
+    &.is-liked &-icon path {
       fill: url(#likeGradient);
       stroke: url(#likeGradient);
     }
-    }
-
-   
   }
-  
+}
+
+// Footer
+footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 0 5px 25px;
+
+  .logo {
+    color: white;
+    font-family: Shrikhand;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  nav {
+    gap: 7px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  i {
+    font-size: 13px;
+    color: white;
+  }
+
+  .icon-txt {
+    color: white;
+    margin-left: 11px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .footer_li-txt {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
