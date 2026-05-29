@@ -46,7 +46,6 @@
 
 body {
   margin: 0;
-  width: 375px;
 }
 
 .hero {
@@ -72,8 +71,10 @@ body {
   font-weight: 300;
 }
 .hero_content--btn {
-  width: 218px;
+  max-width: 218px;
+  width: 100%;
   align-self: center;
+  align-items: center;
   height: 50px;
   padding: 13px 16px;
   border-radius: 30px;
@@ -107,7 +108,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  width: 322.49px;
+  width: 100%;
   height: 72.38px;
   background-color: #f6f6f6;
   border-radius: 20px;
@@ -129,6 +130,10 @@ body {
 .card_section--card--icon {
   margin-right: 27px;
   margin-left: 0;
+  color: #7e7e7e;
+}
+.card_section--card .fa-store {
+  color: #9356DC;
 }
 .card_section--card--text {
   font-size: 16px;
@@ -159,6 +164,7 @@ body {
   border-radius: 15px;
   background-color: white;
   height: 251px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .restaurants-card__image {
   position: relative;
@@ -218,10 +224,6 @@ body {
   width: 22px;
   height: 21px;
 }
-.restaurants-card__like.is-liked .restaurants-card__like-icon path {
-  fill: url(#likeGradient);
-  stroke: url(#likeGradient);
-}
 
 footer {
   background-color: #353535;
@@ -232,11 +234,9 @@ footer {
 footer .logo {
   color: white;
   font-family: Shrikhand;
+  font-style: italic;
   font-weight: 400;
   font-size: 18px;
-}
-footer nav {
-  gap: 7px;
 }
 footer ul {
   list-style: none;
