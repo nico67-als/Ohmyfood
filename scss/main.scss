@@ -37,13 +37,13 @@ body {
   &__btn {
     max-width: 218px;
     width: 100%;
-    align-self: center;    
+    align-self: center;
     padding: 13px 16px;
     border-radius: $radius-btn;
     color: white;
     border: none;
     font-size: 16px;
-    font-weight: 500;    
+    font-weight: 500;
     cursor: pointer;
     @include gradient-primary;
   }
@@ -54,36 +54,36 @@ body {
 .fonctionnement {
   display: flex;
   flex-direction: column;
-  padding: 0px 20px;
+  padding: 0 20px;
   margin-bottom: 68px;
 
-  &_title {
+  &__title {
     @include title;
     margin-bottom: 26px;
   }
-}
 
-.card_section {
-  display: flex;
-  flex-direction: column;
-  padding-left: 12px;
-  gap: 25px;
-
-  &--card {
+  &__cards {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding-left: 12px;
+    gap: 25px;
+  }
+
+  &__card {
+    display: flex;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 72.38px;
-    background-color: #f6f6f6;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 22px 0;
+    background-color: $bg-fonctionnement-card;
+    border-radius: $radius-fonctionnement-card;
+    box-shadow: $shadow-fonctionnement-card;
 
-    &--number {
+    &-number {
       display: inline-flex;
       justify-content: center;
       align-items: center;
+      // Position: Afficher numéro à gauche de la card
       position: relative;
       left: -12px;
       color: white;
@@ -94,22 +94,27 @@ body {
       margin-right: 10px;
     }
 
-    &--icon {
+    &-icon {
       margin-right: 27px;
-      margin-left: 0;
-      color: #7e7e7e;
+      color: $couleur-gris-icons;      
+  }
+
+    &-icon-store {
+      margin-right: 27px;
+      color: $primary-color;
     }
 
-    .fa-store {
-      color: #9356DC;
-    }
-
-    &--text {
+    &-text {
       font-size: 16px;
       font-weight: 500;
     }
   }
 }
+
+
+
+
+
 
 // Section Restaurants
 
@@ -136,7 +141,7 @@ body {
 .restaurants-card {
   display: flex;
   flex-direction: column;
-  border-radius: 15px;
+  border-radius: $radius-restaurants-card;
   background-color: white;
   height: 251px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);

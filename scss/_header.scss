@@ -10,7 +10,8 @@
         align-items: center;
         height: 63px;
         box-shadow: $shadow-sm;
-        position: relative;
+        // Position relative: Afficher box-shadow au-dessus de location
+        position: relative; 
 
         &-logo {
             height: 36px;
