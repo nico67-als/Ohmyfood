@@ -42,35 +42,34 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 0;
   background-color: #f3f3f3;
 }
-.hero_content {
+.hero__content {
   display: flex;
   flex-direction: column;
-  padding: 39px 0 0 0;
+  padding-top: 39px;
   margin-bottom: 57px;
 }
-.hero_content--title {
+.hero__title {
   font-size: 24px;
   font-weight: 700;
   margin: 0;
 }
-.hero_content--subtitle {
+.hero__subtitle {
   font-size: 18px;
   font-weight: 300;
 }
-.hero_content--btn {
+.hero__btn {
   max-width: 218px;
   width: 100%;
   align-self: center;
-  align-items: center;
   padding: 13px 16px;
-  border-radius: 30px;
+  border-radius: 25px;
   color: white;
   border: none;
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
   background: linear-gradient(to top, #9356DC, #FF79DA);
 }
 

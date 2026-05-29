@@ -1,6 +1,6 @@
-@use 'partials/variables' as *;
+@use 'abstracts/variables' as *;
 @use 'header';
-@use 'mixin/mixin' as *;
+@use 'abstracts/mixin' as *;
 
 /* Général */
 * {
@@ -9,7 +9,6 @@
 
 body {
   margin: 0;
-  width: 375px;
 }
 
 // Section A - Réservez le menu qui vous convient
@@ -17,37 +16,36 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 0;
   background-color: $couleur-background;
 
-  &_content {
+  &__content {
     display: flex;
     flex-direction: column;
-    padding: 39px 0 0 0;
+    padding-top: 39px;
     margin-bottom: 57px;
+  }
 
-    &--title {
-      @include title;
-      margin: 0;
-    }
+  &__title {
+    @include title;
+    margin: 0;
+  }
 
-    &--subtitle {
-      @include subtitle;
-    }
+  &__subtitle {
+    @include subtitle;
+  }
 
-    &--btn {
-      width: 218px;
-      align-self: center;
-      height: 50px;
-      padding: 13px 16px;
-      border-radius: 30px;
-      color: white;
-      border: none;
-      font-size: 16px;
-      font-weight: 500;
-      background: linear-gradient(to top, $primary-color, $secondary-color);
-
-    }
+  &__btn {
+    max-width: 218px;
+    width: 100%;
+    align-self: center;    
+    padding: 13px 16px;
+    border-radius: $radius-btn;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;    
+    cursor: pointer;
+    @include gradient-primary;
   }
 }
 
@@ -76,7 +74,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    width: 322.49px;
+    width: 100%;
     height: 72.38px;
     background-color: #f6f6f6;
     border-radius: 20px;
@@ -99,6 +97,11 @@ body {
     &--icon {
       margin-right: 27px;
       margin-left: 0;
+      color: #7e7e7e;
+    }
+
+    .fa-store {
+      color: #9356DC;
     }
 
     &--text {
@@ -136,6 +139,7 @@ body {
   border-radius: 15px;
   background-color: white;
   height: 251px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
 
   &__image {
     position: relative;
@@ -202,10 +206,6 @@ body {
       height: 21px;
     }
 
-    &.is-liked &-icon path {
-      fill: url(#likeGradient);
-      stroke: url(#likeGradient);
-    }
   }
 }
 
@@ -219,12 +219,9 @@ footer {
   .logo {
     color: white;
     font-family: Shrikhand;
+    font-style: italic;
     font-weight: 400;
     font-size: 18px;
-  }
-
-  nav {
-    gap: 7px;
   }
 
   ul {
