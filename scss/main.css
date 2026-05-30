@@ -117,8 +117,7 @@ body {
   margin-right: 27px;
   color: #7e7e7e;
 }
-.fonctionnement__card-icon-store {
-  margin-right: 27px;
+.fonctionnement__card-icon--active {
   color: #9356DC;
 }
 .fonctionnement__card-text {
@@ -133,12 +132,12 @@ body {
   background-color: #f3f3f3;
   gap: 26px;
 }
-.restaurants_title {
+.restaurants__title {
   font-size: 24px;
   font-weight: 700;
   margin: 0;
 }
-.restaurants__card-section {
+.restaurants__cards {
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -149,13 +148,12 @@ body {
   flex-direction: column;
   border-radius: 15px;
   background-color: white;
-  height: 251px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .restaurants-card__image {
   position: relative;
 }
-.restaurants-card__image img {
+.restaurants-card__picture {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -163,14 +161,17 @@ body {
      object-position: bottom;
   width: 100%;
   height: 175px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants-card__picture--active {
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
 }
 .restaurants-card__badge {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: #99e2d0;
+  background: #99E2D0;
   color: #008766;
   font-size: 14px;
   font-weight: 500;
@@ -180,12 +181,11 @@ body {
 }
 .restaurants-card__content {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 16px 25px 12px 13px;
 }
-.restaurants-card__txt {
+.restaurants-card__info {
   display: flex;
   flex-direction: column;
   gap: 5px;

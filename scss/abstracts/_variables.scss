@@ -13,6 +13,7 @@ $couleur-background : #f3f3f3;
 $shadow-sm : 0 2px 4px rgba(0, 0, 0, 0.15);
 $shadow-md : 0 4px 4px rgba(0, 0, 0, 0.25);
 $shadow-fonctionnement-card : 0 4px 15px rgba(0, 0, 0, 0.15);
+$shadow-restaurants-card : 0 4px 15px rgba(0, 0, 0, 0.10);
 
 // Radius
 $radius-btn : 25px;
@@ -21,3 +22,6 @@ $radius-restaurants-card : 15px;
 
 // Cards - fonctionnement
 $bg-fonctionnement-card : #f6f6f6;
+
+// Cards - restaurants
+$couleur-badge-text : #008766;
