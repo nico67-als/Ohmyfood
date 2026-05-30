@@ -29,6 +29,36 @@
   font-weight: 500;
 }
 
+.footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 22px 0 5px 25px;
+}
+.footer__logo {
+  font-family: Shrikhand, cursive;
+  font-style: italic;
+  font-size: 18px;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+.footer__icons {
+  font-size: 13px;
+}
+.footer__link {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+.footer__link--icon {
+  margin-left: 11px;
+  font-weight: 500;
+}
+
 /* Général */
 * {
   font-family: "Roboto", sans-serif;
@@ -209,40 +239,4 @@ body {
 .restaurants-card__like-icon {
   width: 22px;
   height: 21px;
-}
-
-footer {
-  background-color: #353535;
-  display: flex;
-  flex-direction: column;
-  padding: 22px 0 5px 25px;
-}
-footer .logo {
-  color: white;
-  font-family: Shrikhand;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 18px;
-}
-footer ul {
-  list-style: none;
-  padding: 0;
-}
-footer i {
-  font-size: 13px;
-  color: white;
-}
-footer .icon-txt {
-  color: white;
-  margin-left: 11px;
-  font-size: 16px;
-  font-weight: 500;
-}
-footer a {
-  text-decoration: none;
-}
-footer .footer_li-txt {
-  color: white;
-  font-size: 16px;
-  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */

@@ -1,5 +1,3 @@
-@use 'abstracts/variables' as *;
-
 .header {
     display: flex;
     flex-direction: column;
@@ -11,7 +9,7 @@
         height: 63px;
         box-shadow: $shadow-sm;
         // Position relative: Afficher box-shadow au-dessus de location
-        position: relative; 
+        position: relative;
 
         &-logo {
             height: 36px;
@@ -29,7 +27,7 @@
         height: 50px;
         background-color: $couleur-header-background;
         box-shadow: $shadow-md;
-        color: $couleur-gris-subtitle;
+        color: $couleur-sombre;
 
         &-text {
             font-weight: 500;
