@@ -2,6 +2,7 @@
 @use 'header';
 @use 'footer';
 @use 'abstracts/mixin' as *;
+@use 'abstracts/keyframes';
 
 /* Général */
 * {
@@ -45,8 +46,22 @@ body {
     border: none;
     font-size: 16px;
     font-weight: 500;
+    text-decoration: none;
+    box-shadow: $shadow-hero-btn;
     cursor: pointer;
     @include gradient-primary;
+    transition: opacity 300ms ease-out, box-shadow 300ms ease-out;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.85;
+      box-shadow: $shadow-hero-btn-transition;
+    }
+
+    &:active {
+      opacity: 0.85;
+      box-shadow: $shadow-hero-btn-transition;
+    }
   }
 }
 
@@ -199,11 +214,27 @@ body {
     border: none;
     padding: 0;
     cursor: pointer;
+    position: relative;
 
     &-icon {
       width: 22px;
       height: 21px;
+
+      &-fill {
+        clip-path: inset(100% 0 0 0);
+        transition: clip-path 600ms ease;        
+      }
     }
 
+    &-checkbox {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;     
+    }
   }
 }
+
+.restaurants-card__like-checkbox:checked ~ .restaurants-card__like-icon .restaurants-card__like-icon-fill {
+  clip-path: inset(0 0 0 0);
+}
+

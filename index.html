@@ -17,6 +17,9 @@
 </head>
 
 <body>
+    <div class="loader">
+        <div class="loader__spinner"></div>
+    </div>
     <header class="header">
         <div class="header__brand">
             <img class="header__brand-logo" src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
@@ -30,9 +33,9 @@
         <div class="hero__content">
             <h1 class="hero__title">Réservez le menu qui vous convient</h1>
             <p class="hero__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button class="hero__btn">
+            <a href="#" class="hero__btn">
                 Explorer nos restaurants
-            </button>
+            </a>
         </div>
     </section>
     <section class="fonctionnement">
@@ -60,7 +63,8 @@
         <div class="restaurants__cards">
             <article class="restaurants-card">
                 <div class="restaurants-card__image">
-                    <img class="restaurants-card__picture" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un plat">
+                    <img class="restaurants-card__picture"
+                        src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un plat">
                     <span class="restaurants-card__badge">Nouveau</span>
                 </div>
                 <div class="restaurants-card__content">
@@ -68,19 +72,30 @@
                         <h3 class="restaurants-card__title">La palette du goût</h3>
                         <span class="restaurants-card__place">Ménilmontant</span>
                     </div>
-                    <button class="restaurants-card__like">
-                        <svg class="restaurants-card__like-icon" width="22" height="21" viewBox="0 0 22 21" fill="none"
+                    <label class="restaurants-card__like">
+                        <input type="checkbox" class="restaurants-card__like-checkbox">
+                        <svg class="restaurants-card__like-icon" width="22" height="21" viewBox="0 0 22 21"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path
+                            <defs>
+                                <linearGradient id="heart-gradient" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#9356DC" />
+                                    <stop offset="100%" stop-color="#FF79DA" />
+                                </linearGradient>
+                            </defs>
+                            <path class="restaurants-card__like-icon-nofill"
                                 d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
-                                stroke="#101010" />
+                                stroke="#101010" fill="none" />
+                            <path class="restaurants-card__like-icon-fill"
+                                d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                                stroke="url(#heart-gradient)" fill="url(#heart-gradient)" />
                         </svg>
-                    </button>
+                    </label>
                 </div>
             </article>
             <article class="restaurants-card">
                 <div class="restaurants-card__image">
-                    <img class="restaurants-card__picture  restaurants-card__picture--active" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'un plat">
+                    <img class="restaurants-card__picture  restaurants-card__picture--active"
+                        src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'un plat">
                     <span class="restaurants-card__badge">Nouveau</span>
                 </div>
                 <div class="restaurants-card__content">
@@ -89,18 +104,28 @@
                         <span class="restaurants-card__place">Charonne</span>
                     </div>
                     <button class="restaurants-card__like">
-                        <svg class="restaurants-card__like-icon" width="22" height="21" viewBox="0 0 22 21" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
-                                stroke="#101010" />
-                        </svg>
+                        <input type="checkbox" id="heart">
+                        <label for="heart">
+                            <svg class="restaurants-card__like-icon" width="22" height="21" viewBox="0 0 22 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                                    stroke="#101010" />
+                                <defs>
+                                    <linearGradient id="linearGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#9356DC" />
+                                        <stop offset="100%" stop-color="#FF79DA" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </label>
                     </button>
                 </div>
             </article>
             <article class="restaurants-card">
                 <div class="restaurants-card__image">
-                    <img class="restaurants-card__picture" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'un plat">
+                    <img class="restaurants-card__picture"
+                        src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'un plat">
                 </div>
                 <div class="restaurants-card__content">
                     <div class="restaurants-card__info">
@@ -119,7 +144,8 @@
             </article>
             <article class="restaurants-card">
                 <div class="restaurants-card__image">
-                    <img class="restaurants-card__picture" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                    <img class="restaurants-card__picture"
+                        src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                         alt="Photo d'un plat">
                 </div>
                 <div class="restaurants-card__content">
@@ -159,7 +185,7 @@
                 </li>
             </ul>
         </nav>
-    </footer>    
+    </footer>
 </body>
 
 </html>

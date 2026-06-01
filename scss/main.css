@@ -59,6 +59,36 @@
   font-weight: 500;
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-hide {
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loader-hide 0.5s ease 3s forwards;
+}
+.loader__spinner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid #9356DC;
+  border-top-color: #FF79DA;
+  animation: spin 0.8s linear infinite;
+}
+
 /* Général */
 * {
   font-family: "Roboto", sans-serif;
@@ -99,8 +129,19 @@ body {
   border: none;
   font-size: 16px;
   font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   background: linear-gradient(to top, #9356DC, #FF79DA);
+  transition: opacity 300ms ease-out, box-shadow 300ms ease-out;
+}
+.hero__btn:hover, .hero__btn:focus-visible {
+  opacity: 0.85;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+.hero__btn:active {
+  opacity: 0.85;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
 }
 
 .fonctionnement {
@@ -235,8 +276,22 @@ body {
   border: none;
   padding: 0;
   cursor: pointer;
+  position: relative;
 }
 .restaurants-card__like-icon {
   width: 22px;
   height: 21px;
+}
+.restaurants-card__like-icon-fill {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 600ms ease;
+}
+.restaurants-card__like-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.restaurants-card__like-checkbox:checked ~ .restaurants-card__like-icon .restaurants-card__like-icon-fill {
+  clip-path: inset(0 0 0 0);
 }/*# sourceMappingURL=main.css.map */
