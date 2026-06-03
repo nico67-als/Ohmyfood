@@ -24,16 +24,16 @@
         <div class="header__brand">
             <img class="header__brand-logo" src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
         </div>
-        <div class="header__location">
-            <i class="fa-solid fa-location-dot"></i>
-            <span class="header__location-text"> Paris, Belleville</span>
-        </div>
     </header>
+    <section class="location">
+        <i class="fa-solid fa-location-dot"></i>
+        <span> Paris, Belleville</span>
+    </section>
     <section class="hero">
         <div class="hero__content">
             <h1 class="hero__title">Réservez le menu qui vous convient</h1>
             <p class="hero__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <a href="#" class="hero__btn">
+            <a href="#restaurants" class="hero__btn">
                 Explorer nos restaurants
             </a>
         </div>
@@ -58,7 +58,8 @@
             </div>
         </div>
     </section>
-    <section class="restaurants">
+    <section class="restaurants-section" id="restaurants">
+        <div class="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
         <div class="restaurants__cards">
             <article class="restaurants-card">
@@ -185,6 +186,7 @@
                 </div>
             </article>
         </div>
+        </div>
     </section>
     <footer class="footer">
         <span class="footer__logo">ohmyfood</span>
@@ -199,10 +201,10 @@
                     <a class="footer__link footer__link--icon" href="#">Devenir partenaire</a>
                 </li>
                 <li>
-                    <a class="footer__link" href="#">Mentions légales</a>
+                    <a class="footer__link footer__link--margin-left" href="#">Mentions légales</a>
                 </li>
                 <li>
-                    <a class="footer__link" href="#">Contact</a>
+                    <a class="footer__link" href="mailto:contact@ohmyfood.com">Contact</a>
                 </li>
             </ul>
         </nav>

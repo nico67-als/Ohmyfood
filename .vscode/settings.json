@@ -1,3 +1,7 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "Ohmyfood"
+    "liveServer.settings.multiRootWorkspaceName": "Ohmyfood",
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        "**/.claude/**"
+    ]
 }

@@ -1,4 +1,5 @@
-@use 'abstracts/variables' as * ;
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixin' as *;
 
 .footer {
     background-color: $couleur-sombre;
@@ -7,15 +8,32 @@
     color: white;
     padding: 22px 0 5px 25px;
 
+    @include tablet {
+        flex-direction: row-reverse;
+        gap: 16px;
+        align-items: center;
+        padding: 45px 25px 20px 0;
+    }
+
     &__logo {
-        font-family: Shrikhand, cursive;
-        font-style: italic;
+        font-family: Shrikhand, cursive;        
         font-size: 18px;
+
+        @include tablet {
+            margin-left: 40px;
+        }
     }
 
     &__list {
+        display: flex;
+        flex-direction: column;
         list-style: none;
         padding: 0;
+
+        @include tablet {
+            flex-direction: row;
+            gap: 7px;
+        }
     }
 
     &__icons {
@@ -31,6 +49,16 @@
         &--icon {
             margin-left: 11px;
             font-weight: 500;
+
+            @include tablet {
+                margin-left: 5px;
+            }
+        }
+
+        @include tablet {
+            &--margin-left {
+                margin-left: 25px;
+            }
         }
     }
 }

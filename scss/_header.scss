@@ -1,4 +1,5 @@
-@use 'abstracts/variables' as * ;
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixin' as *;
 
 .header {
     display: flex;
@@ -12,28 +13,15 @@
         box-shadow: $shadow-sm;
         // Position relative: Afficher box-shadow au-dessus de location
         position: relative;
+        z-index: 2;
+
+        @include tablet {
+            height: 96px;
+            box-shadow: none;
+        }
 
         &-logo {
             height: 36px;
         }
     }
-
-
-
-    &__location {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 16px;
-        gap: 17px;
-        height: 50px;
-        background-color: $couleur-header-background;
-        box-shadow: $shadow-md;
-        color: $couleur-sombre;
-
-        &-text {
-            font-weight: 500;
-        }
-    }
-
 }

@@ -5,11 +5,12 @@
     font-weight: 700;
 }
 
-@mixin subtitle {
-    font-size: 18px;
-    font-weight: 300;
-}
-
 @mixin gradient-primary {
     background: linear-gradient(to top, $primary-color, $secondary-color);
+}
+
+@mixin tablet {
+    @media (min-width: $breakpoint-tablet) {
+        @content;
+    }
 }
