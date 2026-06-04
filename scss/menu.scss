@@ -20,6 +20,11 @@ body {
     position: relative;
     z-index: 1;
 
+    @include tablet {
+        height: 26vw;
+        min-height: 275px;
+    }
+
 
     &__picture {
         display: block;
@@ -34,6 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    justify-content: center;
     width: 100%;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -44,15 +50,24 @@ body {
     padding-bottom: 40px;
     gap: 40px;
 
-
+    @include tablet {
+        width: 75%;
+        padding: 40px 150px;
+        justify-self: center;
+    }
 
     &__headline {
         display: flex;
         box-sizing: border-box;
         justify-content: space-between;
         align-items: center;
-        padding: 30px 15px 0 15px;        
+        padding: 30px 15px 0 15px;
         width: 100%;
+
+        @include tablet {
+            justify-content: center;
+            gap: 25px;
+        }
     }
 
     &__title {
