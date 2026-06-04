@@ -1,0 +1,188 @@
+@use 'abstracts/variables' as *;
+@use 'header';
+@use 'footer';
+@use 'abstracts/mixin' as *;
+@use 'abstracts/loader';
+
+// Général
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+// Section Hero
+.hero {
+    display: flex;
+    height: 275px;
+    position: relative;
+    z-index: 1;
+
+
+    &__picture {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+// Carte
+
+.carte {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: #f6f6f6;
+    position: relative;
+    z-index: 2;
+    margin-top: -40px;
+    padding-bottom: 40px;
+    gap: 40px;
+
+
+
+    &__headline {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 15px 0 15px;        
+        width: 100%;
+    }
+
+    &__title {
+        font-family: Shrikhand, cursive;
+        font-size: 28px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    &__like {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        position: relative;
+        padding-right: 20px;
+
+        &-icon {
+            width: 22px;
+            height: 21px;
+
+            &-fill {
+                clip-path: inset(100% 0 0 0);
+                transition: clip-path 600ms ease;
+            }
+        }
+
+        &-checkbox {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 13px;
+    }
+
+    &__menu-title {
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 3px;
+            margin-top: 8px;
+            background-color: #99e2d0;
+        }
+    }
+
+    &__cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        align-items: last baseline;
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: $shadow-restaurants-card;
+        padding: 13px 15px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0;
+            gap: 5px;
+
+        }
+
+        &-title {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        &-subtitle {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        &-price {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+
+    &__button {
+        max-width: 218px;
+        width: fit-content;
+        align-self: center;
+        padding: 15px 50px;
+        border-radius: $radius-btn;
+        color: white;
+        border: none;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        box-shadow: $shadow-hero-btn;
+        cursor: pointer;
+        @include gradient-primary;
+        transition: opacity 400ms ease-out, box-shadow 400ms ease-out;
+
+        &:hover,
+        &:focus-visible {
+            opacity: 0.85;
+            box-shadow: $shadow-hero-btn-transition;
+        }
+
+        &:active {
+            opacity: 0.85;
+            box-shadow: $shadow-hero-btn-transition;
+        }
+    }
+}
+
+
+.carte__like-checkbox:checked~.carte__like-icon .carte__like-icon-fill {
+    clip-path: inset(0 0 0 0);
+}

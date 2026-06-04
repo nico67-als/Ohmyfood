@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le délice des sens</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="scss/menu.css">
+</head>
+
+<body>
+    <header class="header-menu">
+        <div class="header-menu__brand">
+            <a href="index.html">
+                <i class="fa-solid fa-arrow-left fa-fw header-menu__brand-icon"></i>
+            </a>
+            <a href="#">
+                <img class="header-menu__brand-logo" src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
+            </a>
+        </div>
+    </header>
+    <section class="hero">
+        <img class="hero__picture" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+            alt="Photographie d'un plat">
+    </section>
+    <section class="carte">
+        <div class="carte__headline">
+            <h1 class="carte__title">Le délice des sens</h1>
+            <label class="carte__like">
+                <input type="checkbox" class="carte__like-checkbox">
+                <svg class="carte__like-icon" width="22" height="21" viewBox="0 0 23 21"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="heart-gradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#9356DC" />
+                            <stop offset="100%" stop-color="#FF79DA" />
+                        </linearGradient>
+                    </defs>
+                    <path class="carte__like-icon-nofill"
+                        d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                        stroke="#101010" fill="none" />
+                    <path class="carte__like-icon-fill"
+                        d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C22.0187 4.12419 22.1558 8.32368 19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                        stroke="url(#heart-gradient)" fill="url(#heart-gradient)" />
+                </svg>
+            </label>
+        </div>
+        <div class="carte__content">
+            <h2 class="carte__menu-title">Entrées</h2>
+            <div class="carte__cards">
+                <div class="carte__card">
+                    <div class="carte__card-text">
+                        <span class="carte__card-title">Tartare de thon</span>
+                        <p class="carte__card-subtitle">Assaisonné au yuzu</p>
+                    </div>
+                    <span class="carte__card-price">25€</span>
+                </div>
+                <div class="carte__card">
+                    <div class="carte__card-text">
+                        <span class="carte__card-title">Bouchée de homard croustillant</span>
+                        <p class="carte__card-subtitle">Et sa farandole de petits légumes</p>
+                    </div>
+                    <span class="carte__card-price">35€</span>
+                </div>
+                <div class="carte__card">
+                    <div class="carte__card-text">
+                        <span class="carte__card-title">Velouté de cèpes </span>
+                        <p class="carte__card-subtitle">Aux truffes</p>
+                    </div>
+                    <span class="carte__card-price">20€</span>
+                </div>
+            </div>
+        </div>
+        <div class="carte__content">
+            <h2 class="carte__menu-title">Plats</h2>
+            <div class="carte__cards">
+                <div class="carte__card">
+                    <div class="carte__card-text">
+                        <span class="carte__card-title">Poulet rôti aux herbes de Provence </span>
+                        <p class="carte__card-subtitle">Et sa crème de truffe</p>
+                    </div>
+                    <span class="carte__card-price">40€</span>
+                </div>
+                <div class="carte__card">
+                    <div class="carte__card-text">
+                        <span class="carte__card-title">Langouste rôtie </span>
+                        <p class="carte__card-subtitle">Et ses légumes de saison</p>
+                    </div>
+                    <span class="carte__card-price">35€</span>
+                </div>
+                <div class="carte__card">
+                    <div class="carte__card-text">
+                        <span class="carte__card-title">Côte de bœuf Angus</span>
+                        <p class="carte__card-subtitle">Et sa purée de panais</p>
+                    </div>
+                    <span class="carte__card-price">44€</span>
+                </div>
+            </div>
+        </div>
+        <div class="carte__content">
+            <h2 class="carte__menu-title">Desserts</h2>
+            <div class="carte__cards">
+                <div class="carte__card">
+                    <div class="carte__card-text">
+                        <span class="carte__card-title">Farandole de desserts</span>
+                        <p class="carte__card-subtitle">Du chef</p>
+                    </div>
+                    <span class="carte__card-price">18€</span>
+                </div>
+                <div class="carte__card">
+                    <div class="carte__card-text">
+                        <span class="carte__card-title">Crème brulée</span>
+                        <p class="carte__card-subtitle">Revisitée</p>
+                    </div>
+                    <span class="carte__card-price">22€</span>
+                </div>
+                <div class="carte__card">
+                    <div class="carte__card-text">
+                        <span class="carte__card-title">Tiramisu</span>
+                        <p class="carte__card-subtitle">À la noisette</p>
+                    </div>
+                    <span class="carte__card-price">23€</span>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="carte__button">
+            Commander
+        </a>
+    </section>
+    <footer class="footer">
+        <span class="footer__logo">ohmyfood</span>
+        <nav>
+            <ul class="footer__list">
+                <li>
+                    <i class="footer__icons fa-solid fa-utensils fa-fw"></i>
+                    <a class="footer__link footer__link--icon" href="#">Proposer un restaurant</a>
+                </li>
+                <li>
+                    <i class="footer__icons fa-solid fa-hands-helping fa-fw"></i>
+                    <a class="footer__link footer__link--icon" href="#">Devenir partenaire</a>
+                </li>
+                <li>
+                    <a class="footer__link footer__link--margin-left" href="#">Mentions légales</a>
+                </li>
+                <li>
+                    <a class="footer__link" href="mailto:contact@ohmyfood.com">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
