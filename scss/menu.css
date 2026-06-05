@@ -259,29 +259,57 @@ body {
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 13px 15px;
+  overflow: hidden;
 }
 .carte__card-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex: 1;
+  min-width: 0;
   margin: 0;
+  padding: 13px 0 13px 15px;
   gap: 5px;
 }
 .carte__card-title {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .carte__card-subtitle {
   margin: 0;
   font-size: 15px;
   font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .carte__card-price {
   margin: 0;
   font-size: 15px;
   font-weight: 700;
+  align-self: flex-end;
+  padding: 0 15px 15px 15px;
+  flex-shrink: 0;
+}
+.carte__card-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  flex: 0 0 0;
+  align-self: stretch;
+  overflow: hidden;
+  transition: flex-basis 400ms ease-in-out;
+}
+.carte__card-check-icon {
+  font-size: 20px;
+}
+.carte__card:hover .carte__card-check {
+  flex-basis: 59px;
 }
 .carte__button {
   max-width: 218px;

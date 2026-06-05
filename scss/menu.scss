@@ -138,13 +138,15 @@ body {
         border-radius: 15px;
         background-color: white;
         box-shadow: $shadow-restaurants-card;
-        padding: 13px 15px;
+        overflow: hidden;
 
         &-text {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            flex: 1;
+            min-width: 0;
             margin: 0;
+            padding: 13px 0 13px 15px;
             gap: 5px;
 
         }
@@ -153,18 +155,47 @@ body {
             margin: 0;
             font-size: 18px;
             font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         &-subtitle {
             margin: 0;
             font-size: 15px;
             font-weight: 300;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         &-price {
             margin: 0;
             font-size: 15px;
             font-weight: 700;
+            align-self: flex-end;
+            padding: 0 15px 15px 15px;
+            flex-shrink: 0;
+        }
+
+        &-check {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $third-color;
+            color: white;
+            flex: 0 0 0;
+            align-self: stretch;
+            overflow: hidden;
+            transition: flex-basis 400ms ease-in-out;
+
+            &-icon {
+                font-size: 20px;            
+            }
+        }
+
+        &:hover &-check {
+            flex-basis: 59px;
         }
     }
 
