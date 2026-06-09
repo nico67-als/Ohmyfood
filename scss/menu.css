@@ -137,6 +137,14 @@
   animation: spin 0.8s linear infinite;
 }
 
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -232,6 +240,19 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0 13px;
+}
+.carte__content-entrees, .carte__content-plats, .carte__content-desserts {
+  opacity: 0;
+  animation: apparition 0.5s ease forwards;
+}
+.carte__content-entrees {
+  animation-delay: 1s;
+}
+.carte__content-plats {
+  animation-delay: 2s;
+}
+.carte__content-desserts {
+  animation-delay: 3s;
 }
 .carte__menu-title {
   font-size: 16px;

@@ -3,6 +3,7 @@
 @use 'footer';
 @use 'abstracts/mixin' as *;
 @use 'abstracts/loader';
+@use 'abstracts/animations' as *;
 
 // Général
 * {
@@ -107,6 +108,26 @@ body {
         display: flex;
         flex-direction: column;
         padding: 0 13px;
+
+        &-entrees,
+        &-plats,
+        &-desserts {
+            opacity: 0;
+            animation: apparition 0.5s ease forwards;
+        }
+
+
+        &-entrees {
+            animation-delay: 1s;
+        }
+
+        &-plats {
+            animation-delay: 2s;
+        }
+
+        &-desserts {
+            animation-delay: 3s;
+        }
     }
 
     &__menu-title {
@@ -190,7 +211,7 @@ body {
             transition: flex-basis 400ms ease-in-out;
 
             &-icon {
-                font-size: 20px;            
+                font-size: 20px;
             }
         }
 
