@@ -2,16 +2,13 @@
 @use 'header';
 @use 'footer';
 @use 'abstracts/mixin' as *;
-@use 'abstracts/loader';
-@use 'abstracts/animations' as *;
+@use 'components/loader';
+@use 'components/animations' as *;
 
 // Général
-* {
-    font-family: "Roboto", sans-serif;
-}
-
 body {
     margin: 0;
+    font-family: "Roboto", sans-serif;
 }
 
 // Section Hero
@@ -21,7 +18,7 @@ body {
     position: relative;
     z-index: 1;
 
-    @include tablet {
+    @include desktop {
         height: 26vw;
         min-height: 275px;
     }
@@ -51,7 +48,7 @@ body {
     padding-bottom: 40px;
     gap: 40px;
 
-    @include tablet {
+    @include desktop {
         width: 75%;
         padding: 40px 150px;
         justify-self: center;
@@ -65,7 +62,7 @@ body {
         padding: 30px 15px 0 15px;
         width: 100%;
 
-        @include tablet {
+        @include desktop {
             justify-content: center;
             gap: 25px;
         }
@@ -118,15 +115,15 @@ body {
 
 
         &-entrees {
-            animation-delay: 1s;
+            animation-delay: 4s;
         }
 
         &-plats {
-            animation-delay: 2s;
+            animation-delay: 5s;
         }
 
         &-desserts {
-            animation-delay: 3s;
+            animation-delay: 6s;
         }
     }
 
@@ -221,31 +218,9 @@ body {
     }
 
     &__button {
-        max-width: 218px;
         width: fit-content;
-        align-self: center;
         padding: 15px 50px;
-        border-radius: $radius-btn;
-        color: white;
-        border: none;
-        font-size: 16px;
-        font-weight: 500;
-        text-decoration: none;
-        box-shadow: $shadow-hero-btn;
-        cursor: pointer;
-        @include gradient-primary;
-        transition: opacity 400ms ease-out, box-shadow 400ms ease-out;
-
-        &:hover,
-        &:focus-visible {
-            opacity: 0.85;
-            box-shadow: $shadow-hero-btn-transition;
-        }
-
-        &:active {
-            opacity: 0.85;
-            box-shadow: $shadow-hero-btn-transition;
-        }
+        @include button;
     }
 }
 

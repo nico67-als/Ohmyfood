@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le délice des sens</title>
+    <title>À la française</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,29 +13,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="scss/menu.css">
+    <link rel="stylesheet" href="../scss/menu.css">
 </head>
 
-<body>
+<body>    
     <header class="header-menu">
-        <a href="index.html" class="header-menu__icon-a">
+        <a href="../index.html" class="header-menu__icon-a">
             <i class="fa-solid fa-arrow-left fa-fw header-menu__icon"></i>
         </a>
-        <a href="#" class="header-menu__logo-a">
-            <img class="header-menu__logo" src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
+        <a href="../index.html" class="header-menu__logo-a">
+            <img class="header-menu__logo" src="../assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
         </a>
     </header>
     <section class="hero">
-        <img class="hero__picture" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+        <img class="hero__picture" src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
             alt="Photographie d'un plat">
     </section>
     <section class="carte">
         <div class="carte__headline">
-            <h1 class="carte__title">Le délice des sens</h1>
+            <h1 class="carte__title">À la française</h1>
             <label class="carte__like">
-                <input type="checkbox" class="carte__like-checkbox">
+                <input type="checkbox" class="carte__like-checkbox" aria-label="Ajouter aux favoris">
                 <svg class="carte__like-icon" width="22" height="21" viewBox="0 0 23 21"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <defs>
                         <linearGradient id="heart-gradient" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="0%" stop-color="#9356DC" />
@@ -56,8 +56,8 @@
             <div class="carte__cards">
                 <div class="carte__card">
                     <div class="carte__card-text">
-                        <span class="carte__card-title">Tartare de thon</span>
-                        <p class="carte__card-subtitle">Assaisonné au yuzu</p>
+                        <span class="carte__card-title">Tartare de poulpe acidulé</span>
+                        <p class="carte__card-subtitle">Aux zestes d'orange</p>
                     </div>
                     <span class="carte__card-price">25€</span>
                     <div class="carte__card-check">
@@ -66,8 +66,8 @@
                 </div>
                 <div class="carte__card">
                     <div class="carte__card-text">
-                        <span class="carte__card-title">Bouchée de homard croustillant</span>
-                        <p class="carte__card-subtitle">Et sa farandole de petits légumes</p>
+                        <span class="carte__card-title">Velouté de légumes d'antan</span>
+                        <p class="carte__card-subtitle">Carotte, panais, topinambour</p>
                     </div>
                     <span class="carte__card-price">35€</span>
                     <div class="carte__card-check">
@@ -76,8 +76,8 @@
                 </div>
                 <div class="carte__card">
                     <div class="carte__card-text">
-                        <span class="carte__card-title">Velouté de cèpes </span>
-                        <p class="carte__card-subtitle">Aux truffes</p>
+                        <span class="carte__card-title">Soupe à l'oignon</span>
+                        <p class="carte__card-subtitle">Revisitée</p>
                     </div>
                     <span class="carte__card-price">20€</span>
                     <div class="carte__card-check">
@@ -91,8 +91,8 @@
             <div class="carte__cards">
                 <div class="carte__card">
                     <div class="carte__card-text">
-                        <span class="carte__card-title">Poulet rôti aux herbes de Provence </span>
-                        <p class="carte__card-subtitle">Et sa crème de truffe</p>
+                        <span class="carte__card-title">Coquilles Saint-Jacques</span>
+                        <p class="carte__card-subtitle">Accompagnées d'une purée de panais</p>
                     </div>
                     <span class="carte__card-price">40€</span>
                     <div class="carte__card-check">
@@ -101,8 +101,8 @@
                 </div>
                 <div class="carte__card">
                     <div class="carte__card-text">
-                        <span class="carte__card-title">Langouste rôtie </span>
-                        <p class="carte__card-subtitle">Et ses légumes de saison</p>
+                        <span class="carte__card-title">Magret de canard</span>
+                        <p class="carte__card-subtitle">Et parmentier de pommes de terre</p>
                     </div>
                     <span class="carte__card-price">35€</span>
                     <div class="carte__card-check">
@@ -111,8 +111,8 @@
                 </div>
                 <div class="carte__card">
                     <div class="carte__card-text">
-                        <span class="carte__card-title">Côte de bœuf Angus</span>
-                        <p class="carte__card-subtitle">Et sa purée de panais</p>
+                        <span class="carte__card-title">Pigeonneau d’Ille-et-Vilaine</span>
+                        <p class="carte__card-subtitle">Sur son lit de gnocchis aux légumes</p>
                     </div>
                     <span class="carte__card-price">44€</span>
                     <div class="carte__card-check">
@@ -126,8 +126,8 @@
             <div class="carte__cards">
                 <div class="carte__card">
                     <div class="carte__card-text">
-                        <span class="carte__card-title">Farandole de desserts</span>
-                        <p class="carte__card-subtitle">Du chef</p>
+                        <span class="carte__card-title">Pétales de violettes glacés</span>
+                        <p class="carte__card-subtitle">Et purée de noisettes</p>
                     </div>
                     <span class="carte__card-price">18€</span>
                     <div class="carte__card-check">
@@ -136,8 +136,8 @@
                 </div>
                 <div class="carte__card">
                     <div class="carte__card-text">
-                        <span class="carte__card-title">Crème brulée</span>
-                        <p class="carte__card-subtitle">Revisitée</p>
+                        <span class="carte__card-title">Fondant au chocolat</span>
+                        <p class="carte__card-subtitle">Revisité</p>
                     </div>
                     <span class="carte__card-price">22€</span>
                     <div class="carte__card-check">
@@ -146,8 +146,8 @@
                 </div>
                 <div class="carte__card">
                     <div class="carte__card-text">
-                        <span class="carte__card-title">Tiramisu</span>
-                        <p class="carte__card-subtitle">À la noisette</p>
+                        <span class="carte__card-title">Millefeuille croustillant</span>
+                        <p class="carte__card-subtitle">Myrtilles et pâte d’amande</p>
                     </div>
                     <span class="carte__card-price">23€</span>
                     <div class="carte__card-check">

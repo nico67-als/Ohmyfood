@@ -8,7 +8,7 @@
     color: white;
     padding: 22px 0 5px 25px;
 
-    @include tablet {
+    @include desktop {
         flex-direction: row-reverse;
         gap: 16px;
         align-items: center;
@@ -19,7 +19,7 @@
         font-family: Shrikhand, cursive;        
         font-size: 18px;
 
-        @include tablet {
+        @include desktop {
             margin-left: 40px;
         }
     }
@@ -30,7 +30,7 @@
         list-style: none;
         padding: 0;
 
-        @include tablet {
+        @include desktop {
             flex-direction: row;
             gap: 7px;
         }
@@ -50,12 +50,12 @@
             margin-left: 11px;
             font-weight: 500;
 
-            @include tablet {
+            @include desktop {
                 margin-left: 5px;
             }
         }
 
-        @include tablet {
+        @include desktop {
             &--margin-left {
                 margin-left: 25px;
             }

@@ -11,7 +11,7 @@
   position: relative;
   z-index: 2;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .header__brand {
     height: 96px;
     box-shadow: none;
@@ -28,7 +28,7 @@
   height: 63px;
   width: 100%;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .header-menu {
     height: 96px;
   }
@@ -54,7 +54,7 @@
   color: white;
   padding: 22px 0 5px 25px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer {
     flex-direction: row-reverse;
     gap: 16px;
@@ -66,7 +66,7 @@
   font-family: Shrikhand, cursive;
   font-size: 18px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer__logo {
     margin-left: 40px;
   }
@@ -77,7 +77,7 @@
   list-style: none;
   padding: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer__list {
     flex-direction: row;
     gap: 7px;
@@ -96,12 +96,12 @@
   margin-left: 11px;
   font-weight: 500;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer__link--icon {
     margin-left: 5px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer__link--margin-left {
     margin-left: 25px;
   }
@@ -123,7 +123,7 @@
   inset: 0;
   z-index: 999;
   background: white;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   animation: loader-hide 0.5s ease 3s forwards;
@@ -145,12 +145,9 @@
     opacity: 1;
   }
 }
-* {
-  font-family: "Roboto", sans-serif;
-}
-
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .hero {
@@ -159,7 +156,7 @@ body {
   position: relative;
   z-index: 1;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .hero {
     height: 26vw;
     min-height: 275px;
@@ -187,7 +184,7 @@ body {
   padding-bottom: 40px;
   gap: 40px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .carte {
     width: 75%;
     padding: 40px 150px;
@@ -202,7 +199,7 @@ body {
   padding: 30px 15px 0 15px;
   width: 100%;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .carte__headline {
     justify-content: center;
     gap: 25px;
@@ -246,13 +243,13 @@ body {
   animation: apparition 0.5s ease forwards;
 }
 .carte__content-entrees {
-  animation-delay: 1s;
+  animation-delay: 4s;
 }
 .carte__content-plats {
-  animation-delay: 2s;
+  animation-delay: 5s;
 }
 .carte__content-desserts {
-  animation-delay: 3s;
+  animation-delay: 6s;
 }
 .carte__menu-title {
   font-size: 16px;
@@ -333,11 +330,11 @@ body {
   flex-basis: 59px;
 }
 .carte__button {
-  max-width: 218px;
   width: -moz-fit-content;
   width: fit-content;
-  align-self: center;
   padding: 15px 50px;
+  max-width: 218px;
+  align-self: center;
   border-radius: 25px;
   color: white;
   border: none;
@@ -346,8 +343,8 @@ body {
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  background: linear-gradient(to top, #9356DC, #FF79DA);
   transition: opacity 400ms ease-out, box-shadow 400ms ease-out;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
 }
 .carte__button:hover, .carte__button:focus-visible {
   opacity: 0.85;

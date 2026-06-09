@@ -2,15 +2,12 @@
 @use 'header';
 @use 'footer';
 @use 'abstracts/mixin' as *;
-@use 'abstracts/loader';
+@use 'components/loader';
 
 /* Général */
-* {
-  font-family: "Roboto", sans-serif;
-}
-
 body {
-  margin: 0;  
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 // Section Localisation
@@ -29,7 +26,7 @@ body {
   position: relative;
   z-index: 1;
 
-  @include tablet {
+  @include desktop {
     box-shadow: none;
   }
 }
@@ -52,7 +49,7 @@ body {
     @include title;
     margin: 0;
 
-    @include tablet {
+    @include desktop {
       font-size: 40px;
       font-weight: 700;
     }
@@ -60,35 +57,13 @@ body {
 
   &__subtitle {
     font-size: 18px;
-    font-weight: 300;    
+    font-weight: 300;
   }
 
   &__btn {
-    max-width: 218px;
     width: 100%;
-    align-self: center;
     padding: 13px 16px;
-    border-radius: $radius-btn;
-    color: white;
-    border: none;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    box-shadow: $shadow-hero-btn;
-    cursor: pointer;
-    @include gradient-primary;
-    transition: opacity 400ms ease-out, box-shadow 400ms ease-out;
-
-    &:hover,
-    &:focus-visible {
-      opacity: 0.85;
-      box-shadow: $shadow-hero-btn-transition;
-    }
-
-    &:active {
-      opacity: 0.85;
-      box-shadow: $shadow-hero-btn-transition;
-    }
+    @include button;
   }
 }
 
@@ -98,11 +73,11 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0 20px 68px 20px;
-  margin: 0 auto;   
+  margin: 0 auto;
   max-width: 1080px;
   box-sizing: border-box;
 
-  @include tablet {
+  @include desktop {
     padding: 50px 20px;
   }
 
@@ -117,8 +92,8 @@ body {
     padding-left: 12px;
     gap: 25px;
 
-    @include tablet {
-      flex-direction: row;      
+    @include desktop {
+      flex-direction: row;
     }
   }
 
@@ -130,7 +105,7 @@ body {
     padding: 22px 2px 22px 0;
     background-color: $bg-fonctionnement-card;
     border-radius: $radius-fonctionnement-card;
-    box-shadow: $shadow-fonctionnement-card;    
+    box-shadow: $shadow-fonctionnement-card;
 
     &-number {
       display: inline-flex;
@@ -167,18 +142,19 @@ body {
 .restaurants-section {
   background-color: $couleur-background;
 }
+
 .restaurants {
   display: flex;
   flex-direction: column;
   padding: 54px 20px;
-  margin: 0 auto;  
+  margin: 0 auto;
   gap: 26px;
   max-width: 1080px;
   box-sizing: border-box;
 
   &__title {
     @include title;
-    margin: 0;    
+    margin: 0;
   }
 
   &__cards {
@@ -186,10 +162,10 @@ body {
     flex-direction: column;
     gap: 18px;
 
-    @include tablet {
-      flex-direction: row;          
-      flex-wrap: wrap;    
-      column-gap: 7vw;                
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 7vw;
     }
   }
 
@@ -202,8 +178,9 @@ body {
   background-color: white;
   box-shadow: $shadow-restaurants-card;
 
-  @include tablet {
-    flex: 40%;}
+  @include desktop {
+    flex: 40%;
+  }
 
   &__image {
     position: relative;
@@ -217,7 +194,7 @@ body {
     height: 175px;
     border-radius: $radius-restaurants-card $radius-restaurants-card 0 0;
 
-    @include tablet {
+    @include desktop {
       object-position: center;
     }
 
