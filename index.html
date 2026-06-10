@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="assets/main.css">
 </head>
 
 <body>
@@ -21,9 +21,9 @@
         <div class="loader__spinner"></div>
     </div>
     <header class="header">
-        <div class="header__brand">
+        <a class="header__brand" href="#">
             <img class="header__brand-logo" src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
-        </div>
+        </a>
     </header>
     <section class="location">
         <i class="fa-solid fa-location-dot"></i>
@@ -71,11 +71,14 @@
                     </div>
                     <div class="restaurants-card__content">
                         <div class="restaurants-card__info">
-                            <h3 class="restaurants-card__title">La palette du goût</h3>
+                            <a class="restaurants-card__title-link" href="restaurants/menu_lapalettedugout.html">
+                                <h3 class="restaurants-card__title">La palette du goût</h3>
+                            </a>
                             <span class="restaurants-card__place">Ménilmontant</span>
                         </div>
                         <label class="restaurants-card__like">
-                            <input type="checkbox" class="restaurants-card__like-checkbox" aria-label="Ajouter aux favoris">
+                            <input type="checkbox" class="restaurants-card__like-checkbox"
+                                aria-label="Ajouter aux favoris">
                             <svg class="restaurants-card__like-icon" width="22" height="21" viewBox="0 0 23 21"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                 <defs>
@@ -96,17 +99,20 @@
                 </article>
                 <article class="restaurants-card">
                     <div class="restaurants-card__image">
-                        <img class="restaurants-card__picture  restaurants-card__picture--active"
+                        <img class="restaurants-card__picture"
                             src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'un plat">
                         <span class="restaurants-card__badge">Nouveau</span>
                     </div>
                     <div class="restaurants-card__content">
                         <div class="restaurants-card__info">
-                            <h3 class="restaurants-card__title">La note enchantée</h3>
+                            <a class="restaurants-card__title-link" href="restaurants/menu_lanoteenchantee.html">
+                                <h3 class="restaurants-card__title">La note enchantée</h3>
+                            </a>
                             <span class="restaurants-card__place">Charonne</span>
                         </div>
                         <label class="restaurants-card__like">
-                            <input type="checkbox" class="restaurants-card__like-checkbox" aria-label="Ajouter aux favoris">
+                            <input type="checkbox" class="restaurants-card__like-checkbox"
+                                aria-label="Ajouter aux favoris">
                             <svg class="restaurants-card__like-icon" width="22" height="21" viewBox="0 0 23 21"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                 <path class="restaurants-card__like-icon-nofill"
@@ -126,11 +132,14 @@
                     </div>
                     <div class="restaurants-card__content">
                         <div class="restaurants-card__info">
-                            <h3 class="restaurants-card__title">À la française</h3>
+                            <a class="restaurants-card__title-link" href="restaurants/menu_alafrancaise.html">
+                                <h3 class="restaurants-card__title">À la française</h3>
+                            </a>
                             <span class="restaurants-card__place">Cité Rouge</span>
                         </div>
                         <label class="restaurants-card__like">
-                            <input type="checkbox" class="restaurants-card__like-checkbox" aria-label="Ajouter aux favoris">
+                            <input type="checkbox" class="restaurants-card__like-checkbox"
+                                aria-label="Ajouter aux favoris">
                             <svg class="restaurants-card__like-icon" width="22" height="21" viewBox="0 0 23 21"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                 <path class="restaurants-card__like-icon-nofill"
@@ -151,11 +160,14 @@
                     </div>
                     <div class="restaurants-card__content">
                         <div class="restaurants-card__info">
-                            <h3 class="restaurants-card__title">Le délice des sens</h3>
+                            <a class="restaurants-card__title-link" href="restaurants/menu_ledelicedessens.html">
+                                <h3 class="restaurants-card__title">Le délice des sens</h3>
+                            </a>
                             <span class="restaurants-card__place">Folie-Méricourt</span>
                         </div>
                         <label class="restaurants-card__like">
-                            <input type="checkbox" class="restaurants-card__like-checkbox" aria-label="Ajouter aux favoris">
+                            <input type="checkbox" class="restaurants-card__like-checkbox"
+                                aria-label="Ajouter aux favoris">
                             <svg class="restaurants-card__like-icon" width="22" height="21" viewBox="0 0 23 21"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                 <path class="restaurants-card__like-icon-nofill"

@@ -21,15 +21,23 @@
 
     &:hover,
     &:focus-visible {
-      opacity: 0.85;
-      box-shadow: $shadow-hero-btn-transition;
+        opacity: 0.85;
+        box-shadow: $shadow-hero-btn-transition;
     }
 
     &:active {
-      opacity: 0.85;
-      box-shadow: $shadow-hero-btn-transition;
+        opacity: 0.85;
+        box-shadow: $shadow-hero-btn-transition;
     }
 }
+
+@mixin tablet {
+    @media (min-width: $breakpoint-tablet) {
+        @content;
+    }
+
+}
+
 
 @mixin desktop {
     @media (min-width: $breakpoint-desktop) {

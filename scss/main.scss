@@ -49,9 +49,12 @@ body {
     @include title;
     margin: 0;
 
+    @include tablet {
+      font-size: 35px;
+    }
+
     @include desktop {
       font-size: 40px;
-      font-weight: 700;
     }
   }
 
@@ -77,7 +80,7 @@ body {
   max-width: 1080px;
   box-sizing: border-box;
 
-  @include desktop {
+  @include tablet {
     padding: 50px 20px;
   }
 
@@ -92,7 +95,7 @@ body {
     padding-left: 12px;
     gap: 25px;
 
-    @include desktop {
+    @include tablet {
       flex-direction: row;
     }
   }
@@ -162,7 +165,7 @@ body {
     flex-direction: column;
     gap: 18px;
 
-    @include desktop {
+    @include tablet {
       flex-direction: row;
       flex-wrap: wrap;
       column-gap: 7vw;
@@ -177,8 +180,9 @@ body {
   border-radius: $radius-restaurants-card;
   background-color: white;
   box-shadow: $shadow-restaurants-card;
+  position: relative;
 
-  @include desktop {
+  @include tablet {
     flex: 40%;
   }
 
@@ -189,18 +193,10 @@ body {
   &__picture {
     display: block;
     object-fit: cover;
-    object-position: bottom;
+    object-position: 50% 60%;
     width: 100%;
     height: 175px;
     border-radius: $radius-restaurants-card $radius-restaurants-card 0 0;
-
-    @include desktop {
-      object-position: center;
-    }
-
-    &--active {
-      object-position: 50% 60%;
-    }
   }
 
   &__badge {
@@ -233,6 +229,17 @@ body {
     margin: 0;
     font-size: 18px;
     font-weight: 700;
+
+    &-link {
+      text-decoration: none;
+      color: black;
+    }
+
+    &-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
   }
 
   &__place {
@@ -247,6 +254,7 @@ body {
     padding: 0;
     cursor: pointer;
     position: relative;
+    z-index: 1;
 
     &-icon {
       width: 22px;

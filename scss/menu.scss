@@ -18,7 +18,7 @@ body {
     position: relative;
     z-index: 1;
 
-    @include desktop {
+    @include tablet {
         height: 26vw;
         min-height: 275px;
     }
@@ -48,6 +48,12 @@ body {
     padding-bottom: 40px;
     gap: 40px;
 
+    @include tablet {
+        width: 75%;
+        padding: 10px 40px;
+        justify-self: center;
+    }
+
     @include desktop {
         width: 75%;
         padding: 40px 150px;
@@ -62,7 +68,7 @@ body {
         padding: 30px 15px 0 15px;
         width: 100%;
 
-        @include desktop {
+        @include tablet {
             justify-content: center;
             gap: 25px;
         }
@@ -115,15 +121,15 @@ body {
 
 
         &-entrees {
-            animation-delay: 4s;
+            animation-delay: 1s;
         }
 
         &-plats {
-            animation-delay: 5s;
+            animation-delay: 2s;
         }
 
         &-desserts {
-            animation-delay: 6s;
+            animation-delay: 3s;
         }
     }
 

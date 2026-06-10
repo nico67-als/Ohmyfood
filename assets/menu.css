@@ -14,7 +14,6 @@
 @media (min-width: 1024px) {
   .header__brand {
     height: 96px;
-    box-shadow: none;
   }
 }
 .header__brand-logo {
@@ -123,7 +122,7 @@
   inset: 0;
   z-index: 999;
   background: white;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   animation: loader-hide 0.5s ease 3s forwards;
@@ -156,7 +155,7 @@ body {
   position: relative;
   z-index: 1;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .hero {
     height: 26vw;
     min-height: 275px;
@@ -184,6 +183,13 @@ body {
   padding-bottom: 40px;
   gap: 40px;
 }
+@media (min-width: 768px) {
+  .carte {
+    width: 75%;
+    padding: 10px 40px;
+    justify-self: center;
+  }
+}
 @media (min-width: 1024px) {
   .carte {
     width: 75%;
@@ -199,7 +205,7 @@ body {
   padding: 30px 15px 0 15px;
   width: 100%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .carte__headline {
     justify-content: center;
     gap: 25px;
@@ -243,13 +249,13 @@ body {
   animation: apparition 0.5s ease forwards;
 }
 .carte__content-entrees {
-  animation-delay: 4s;
+  animation-delay: 1s;
 }
 .carte__content-plats {
-  animation-delay: 5s;
+  animation-delay: 2s;
 }
 .carte__content-desserts {
-  animation-delay: 6s;
+  animation-delay: 3s;
 }
 .carte__menu-title {
   font-size: 16px;
